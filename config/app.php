@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Foundation\Vite;
 use Illuminate\Support\Facades\Facade;
 
 return [
@@ -82,7 +83,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'ru',
 
     /*
     |--------------------------------------------------------------------------
@@ -184,6 +185,8 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
+	
+
         /*
          * Package Service Providers...
          */
@@ -211,7 +214,9 @@ return [
     */
 
     'aliases' => Facade::defaultAliases()->merge([
-        // 'ExampleClass' => App\Example\ExampleClass::class,
+		// 'ExampleClass' => App\Example\ExampleClass::class,
+		'Debugbar' => Barryvdh\Debugbar\Facades\Debugbar::class,
+	
     ])->toArray(),
 
 ];
