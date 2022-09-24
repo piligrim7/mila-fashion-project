@@ -5,7 +5,7 @@
 @endsection
 
 @section('main_content')
-<img class="lc_main_picture p-3 p-md-4" src="{{ vite::asset ('resources/images/main.png') }}" alt="Sketch picture"/>
+<img class="lc_main_picture p-3 p-md-4" src="{{ Vite::asset('resources/images/main.png') }}" alt="Sketch picture"/>
 {{-- <img class="lc_main_picture p-3 p-md-4" src="http://localhost:5173/resources/images/main.png') }}" alt="Sketch picture"/> --}}
 <div class="jumbotron p-4 p-md-5 text-white bg-transparent rounded">
     <div class="col-md-6 px-0">

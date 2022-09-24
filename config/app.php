@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Foundation\Vite;
 use Illuminate\Support\Facades\Facade;
 
 return [
