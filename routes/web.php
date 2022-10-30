@@ -13,8 +13,35 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('lang/{lang}',
+	[
+		'as' => 'lang.switch',
+		'uses' => 'App\Http\Controllers\LanguageController@switchLang'
+	]
+);
+
 Route::get('/', function () {
     return view('main');
+});
+
+Route::get('/fashion_illustrations', function () {
+	return view('fashion_illustrations');
+});
+
+Route::get('/landscapes', function () {
+	return view('landscapes');
+});
+
+Route::get('/graphics', function () {
+	return view('graphics');
+});
+
+Route::get('/education', function () {
+	return view('education');
+});
+
+Route::get('/master_classes', function () {
+	return view('master_classes');
 });
 
 Route::get('/about', function() {

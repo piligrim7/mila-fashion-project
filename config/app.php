@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Foundation\Vite;
 use Illuminate\Support\Facades\Facade;
 
 return [
@@ -183,8 +184,8 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-
-	
+			
+		// Illuminate\Foundation\Vite::class,
 
         /*
          * Package Service Providers...

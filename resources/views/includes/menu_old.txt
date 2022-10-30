@@ -1,0 +1,23 @@
+
+<nav class='navbar fixed-top navbar-dark navbar-expand-sm flex-sm-column'>
+    <div class='navbar-brand'>
+        <h1 class='text-light lc_margin-0'>
+			<?= $header_text ?>
+        </h1>
+    </div>
+    <button class='navbar-toggler justify-content-end lc_border-transparent'
+            type='button' data-toggle='collapse'
+            data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false'
+            aria-label='Toggle navigation'>
+        <span class='lc_navbar-mytoggler-icon'></span>
+    </button>
+
+    <div class='collapse navbar-collapse' id='navbarSupportedContent'>
+        <ul class='navbar-nav mr-auto'>
+			<li class='nav-item'>
+				qwerty
+                {{-- <a class='lc_mnu nav-link" . ($page == "." . $this->state() ? ' active' : '') . "' href='" . $page . "' title='" . $value["name"] . "'>" . $value["name"] . "</a> --}}
+            </li>
+		</ul>
+	</div>
+</nav>
