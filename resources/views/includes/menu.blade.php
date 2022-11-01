@@ -1,7 +1,7 @@
 @section('menu_content')
 
 
-    {{-- https://flowbite.com/docs/components/mega-menu/ --}}
+    {{--mega-menu https://flowbite.com/docs/components/mega-menu/ --}}
 
     <nav class="fixed top-0 z-0 bg-white dark:bg-black bg-opacity-90 dark:bg-opacity-90 w-full px-2 md:px-4 py-2.5">
         <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
@@ -38,7 +38,7 @@
                 </span>
             </a>
             <div class="flex items-center md:order-2">
-                {{-- language --}}
+                {{-- language -- https://pro-cod.ru/lokalizaciya-v-laravel-s-pereklyuchatelem-yazykov-multiyazychnost.html}}
                 <button type="button" data-dropdown-toggle="language-dropdown-menu"
                     class="inline-flex justify-center items-center pl-2 py-1 pr-1 text-gray-700 dark:text-gray-400 rounded cursor-pointer hover:text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
                     {{ Str::ucfirst(App::getLocale()) }}
@@ -67,7 +67,7 @@
                         @endforeach
                     </ul>
                 </div>
-                {{-- color theme --}}
+                {{-- color theme https://www.freecodecamp.org/news/how-to-build-a-dark-mode-switcher-with-tailwind-css-and-flowbite/--}}
                 <button id="theme-toggle" type="button"
                     class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:ring-gray-200 dark:focus:ring-gray-700 rounded text-sm p-1.5">
                     <svg id="theme-toggle-dark-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"
