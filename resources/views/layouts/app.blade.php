@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 {{-- <html class="dark"> --}}
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+{{-- <html lang="{{ str_replace('_', '-', app()->getLocale()) }}"> --}}
+<html lang="En">
 <?php
 $header_text = 'Fashion style factory';
 $footer_text = '© Lysakov Y. V., 2022';

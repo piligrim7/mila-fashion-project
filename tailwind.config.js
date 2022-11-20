@@ -2,7 +2,17 @@
 module.exports = {
 	content: ["./resources/**/*.blade.php",],
 	theme: {
-		extend: {},
+		extend: {
+		}
+	},
+	variants:
+	{
+		
+		extend: {
+			// textColor: ['active'],
+			// textDecorationColor: ['active'],
+			// backgroundColor: ['active'],
+		}
 	},
 	plugins: [],
 	darkMode: 'class',
