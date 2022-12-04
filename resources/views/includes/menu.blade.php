@@ -133,7 +133,7 @@
                     </li>
                     <li>
                         <button id="mega-menu-dropdown-button" data-dropdown-toggle="mega-menu-dropdown"
-                            class="flex {{ (Request::is('my_work/*') ? 'ly-current-item' : '') }} items-center ly-menu-small-screen ly-menu-large-screen py-2 w-full ">
+                            class="flex {{ (Request::is('my_work/*') ? 'ly-current-item' : '') }} items-center ly-menu-all-screen ly-menu-large-screen py-2 w-full ">
                             {{ __('My work') }}
                             <svg aria-hidden="true" class="ml-0 w-5 h-5 md:w-4 md:h-4" fill="currentColor"
                                 viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -142,7 +142,7 @@
                                     clip-rule="evenodd"></path>
                             </svg>
                         </button>
-                        <div id="mega-menu-dropdown" class="hidden absolute z-10 grid-cols-2 w-auto bg-white rounded-lg border border-gray-200 shadow-md dark:border-gray-700 md:grid-cols-3 dark:bg-gray-700">
+                        <div id="mega-menu-dropdown" class="hidden absolute z-10 grid-cols-2 md:grid-cols-3 w-auto rounded-lg border bg-white border-gray-200 shadow-md dark:border-gray-800 dark:bg-black ">
                             <div class="p-2 md:p-4">
                                 <ul class="space-y-0 md:space-y-4" aria-labelledby="mega-menu-dropdown-button">
                                     <li>
