@@ -22,32 +22,32 @@ Route::get('lang/{lang}',
 
 Route::get('/', function () {
     return view('main');
-});
+})->name('main');
 
-Route::get('/fashion_illustrations', function () {
-	return view('fashion_illustrations');
-});
+Route::get('/my_work/fashion_illustrations', function () {
+	return view('my_work/fashion_illustrations');
+})->name('fashion_illustrations');
 
-Route::get('/landscapes', function () {
-	return view('landscapes');
-});
+Route::get('/my_work/landscapes', function () {
+	return view('my_work/landscapes');
+})->name('landscapes');
 
-Route::get('/graphics', function () {
-	return view('graphics');
-});
+Route::get('/my_work/graphics', function () {
+	return view('my_work/graphics');
+})->name('graphics');
 
 Route::get('/education', function () {
 	return view('education');
-});
+})->name('education');
 
 Route::get('/master_classes', function () {
 	return view('master_classes');
-});
+})->name('master_classes');
 
 Route::get('/about', function() {
 	return view('about');
-});
+})->name('about');
 
-Route::get('/user/{id}/{name}', function($id, $name){
-	return 'ID: '. $id.'. Name: '.$name;
-});
+// Route::get('/user/{id}/{name}', function($id, $name){
+// 	return 'ID: '. $id.'. Name: '.$name;
+// })->name('');

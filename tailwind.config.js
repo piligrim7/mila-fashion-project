@@ -7,12 +7,16 @@ module.exports = {
 	},
 	variants:
 	{
-		
-		extend: {
-			// textColor: ['active'],
-			// textDecorationColor: ['active'],
-			// backgroundColor: ['active'],
-		}
+		textColor: ['current'],
+		// accessibility: ['responsive', 'hover', 'focus', 'active', 'group-hover'],
+		// backgroundColor: ['responsive', 'hover', 'focus', 'active']
+		// extend: {
+		// 	a: ['active'],
+		// 	underline: ['active'],
+		// 	textColor: ['active'],
+		// 	textDecorationColor: ['active'],
+		// 	backgroundColor: ['active'],
+		// }
 	},
 	plugins: [],
 	darkMode: 'class',

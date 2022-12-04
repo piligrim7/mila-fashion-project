@@ -1,5 +1,6 @@
 @section('menu_content')
 
+			{{-- ly-menu --}}
 
     {{--mega-menu https://flowbite.com/docs/components/mega-menu/ --}}
 
@@ -25,7 +26,7 @@
 
                 <svg class="-rotate-[28deg] -translate-y-3 my-2 fill-black dark:fill-white" width="90" viewBox="0 0 234 93"
                     xmlns="http://www.w3.org/2000/svg">
-                    <path class="fill-red-500 stroke-red-500"
+                    <path class="fill-red-500 stroke-red-500" 
                         d="M3.432 83.432C1.81067 83.432 1 82.6213 1 81C1.08533 77.416 1.46933 73.1067 2.152 68.072C2.57867 64.8293 2.96267 62.0987 3.304 59.88C3.64533 57.6613 3.85867 55.9973 3.944 54.888C4.11467 53.6933 4.712 53.096 5.736 53.096C6.67467 53.096 7.144 53.6507 7.144 54.76C7.144 57.832 7.144 60.3493 7.144 62.312C7.144 64.1893 7.10133 65.512 7.016 66.28V66.536C7.016 67.3893 7.35733 67.816 8.04 67.816C8.38133 67.816 8.72267 67.56 9.064 67.048C12.136 62.2693 15.464 59.88 19.048 59.88C20.6693 59.88 21.864 60.9893 22.632 63.208C22.8027 63.6347 23.016 64.4453 23.272 65.64C23.6133 66.7493 23.9547 68.2427 24.296 70.12C24.552 71.2293 25.1067 71.784 25.96 71.784C26.472 71.784 27.1547 71.4853 28.008 70.888C28.4347 70.632 29.0747 70.1627 29.928 69.48C30.8667 68.7973 32.0187 67.9013 33.384 66.792C39.1867 62.2693 42.6853 60.008 43.88 60.008C45.928 60.008 47.5067 63.208 48.616 69.608C49.64 75.0693 50.7493 77.8 51.944 77.8C52.2853 77.8 53.0107 77.928 54.12 78.184C55.144 78.2693 55.784 78.2693 56.04 78.184C56.2107 78.0987 56.3813 78.056 56.552 78.056C56.7227 77.9707 56.8933 77.928 57.064 77.928C58.1733 77.928 58.728 78.44 58.728 79.464C58.728 80.6587 57.7893 81.64 55.912 82.408C54.5467 83.0053 52.84 83.176 50.792 82.92C48.8293 82.92 47.208 81.5973 45.928 78.952C45.416 77.7573 44.648 75.2827 43.624 71.528C42.9413 68.7973 42.216 67.432 41.448 67.432C40.424 67.432 38.9307 67.9867 36.968 69.096C35.0053 70.2053 33.0427 71.4853 31.08 72.936C29.1173 74.3867 27.5387 75.752 26.344 77.032C26.0027 77.4587 25.3627 77.672 24.424 77.672C22.5467 77.672 21.48 77.2453 21.224 76.392C19.6027 70.1627 18.2373 67.048 17.128 67.048C14.312 67.048 11.7947 68.84 9.576 72.424C8.97867 73.3627 8.38133 74.6 7.784 76.136C7.18667 77.672 6.54667 79.5493 5.864 81.768C5.52267 82.6213 5.224 82.9627 4.968 82.792C4.54133 83.2187 4.02933 83.432 3.432 83.432Z"
                         stroke-width="2" mask="url(#path-1-outside-1_11_6)" />
                     <path
@@ -56,13 +57,14 @@
             <div class="flex items-center md:order-2">
                 {{-- language https://pro-cod.ru/lokalizaciya-v-laravel-s-pereklyuchatelem-yazykov-multiyazychnost.html --}}
                 <button type="button" data-dropdown-toggle="language-dropdown-menu"
-                    class="inline-flex justify-center items-center pl-2 py-1 pr-1 text-gray-700 dark:text-gray-400 rounded cursor-pointer hover:text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
+                    class="inline-flex justify-center items-center pl-2 py-1 pr-1 text-gray-700 dark:text-gray-400 rounded cursor-pointer hover:text-gray-700 dark:hover:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700">
+
                     {{ Str::ucfirst(App::getLocale()) }}
                     <svg aria-hidden="true" class="ml-1 w-5 h-5 md:w-4 md:h-4" fill="currentColor" viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd"
-                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                            clip-rule="evenodd"></path>
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z">
+                        </path>
                     </svg>
                 </button>
                 {{-- language selector --}}
@@ -75,7 +77,7 @@
                             @if (!App::isLocale($lang))
                                 <li>
                                     <a href="{{ route('lang.switch', $lang) }}"
-                                        class="block py-2 px-4 text-sm text-gray-500 dark:text-gray-400 hover:font-bold hover:text-blue-600 dark:hover:text-blue-500">
+                                        class="block py-2 px-4 text-sm text-gray-700 dark:text-gray-400 hover:font-bold hover:text-red-500 dark:hover:text-red-500">
                                         {{ $language }}
                                     </a>
                                 </li>
@@ -85,7 +87,7 @@
                 </div>
                 {{-- color theme https://www.freecodecamp.org/news/how-to-build-a-dark-mode-switcher-with-tailwind-css-and-flowbite/--}}
                 <button id="theme-toggle" type="button"
-                    class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:ring-gray-200 dark:focus:ring-gray-700 rounded text-sm p-1.5">
+                    class="text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 focus:ring-gray-200 dark:focus:ring-gray-700 rounded text-sm p-1.5">
                     <svg id="theme-toggle-dark-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg">
                         <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
@@ -94,7 +96,8 @@
                         xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-                            fill-rule="evenodd" clip-rule="evenodd"></path>
+                            >
+						</path>
                     </svg>
                 </button>
                 {{-- login/password --}}
@@ -107,7 +110,7 @@
 
                 {{-- burger --}}
                 <button data-collapse-toggle="mega-menu" type="button"
-                    class="inline-flex items-center p-2 ml-1 text-sm text-gray-700 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    class="inline-flex items-center p-1 ml-1 text-sm text-gray-500 rounded md:hidden hover:bg-gray-200 focus:outline-none focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                     aria-controls="mega-menu" aria-expanded="false">
                     <span class="sr-only">Open main menu</span>
                     <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
@@ -121,110 +124,58 @@
             </div>
             {{-- menu --}}
             <div id="mega-menu" class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1">
-                <ul class="flex flex-col mt-4 font-medium md:flex-row md:space-x-8 md:mt-0">
-                    <li>
-                        <a href="/"
-                            class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:font-bold hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-gray-400 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
-                            aria-current="page">
-                            
+                <ul id="main-menu" class="flex flex-col mt-4 font-medium md:flex-row md:space-x-4 md:mt-0">
+                    <li >
+                        <a href="{{ route('main') }}" class="{{ Route::currentRouteNamed('main') ? 'ly-current-item' : '' }}" >
 							{{ __('Main') }}
 							
 						</a>
                     </li>
                     <li>
                         <button id="mega-menu-dropdown-button" data-dropdown-toggle="mega-menu-dropdown"
-                            class="flex justify-between items-center py-2 pr-4 pl-3 w-full italic hover:font-bold text-gray-700 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-gray-400 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">
+                            class="flex {{ (Request::is('my_work/*') ? 'ly-current-item' : '') }} items-center ly-menu-small-screen ly-menu-large-screen py-2 w-full ">
                             {{ __('My work') }}
-                            <svg aria-hidden="true" class="ml-1 w-5 h-5 md:w-4 md:h-4" fill="currentColor"
+                            <svg aria-hidden="true" class="ml-0 w-5 h-5 md:w-4 md:h-4" fill="currentColor"
                                 viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd"
                                     d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                                     clip-rule="evenodd"></path>
                             </svg>
                         </button>
-                        <div id="mega-menu-dropdown" class="hidden absolute z-10 grid-cols-2 w-auto text-sm bg-white rounded-lg border border-gray-100 shadow-md dark:border-gray-700 md:grid-cols-3 dark:bg-gray-700">
-                            <div class="p-4 pb-0 text-gray-900 md:pb-4 dark:text-white">
-                                <ul class="space-y-4" aria-labelledby="mega-menu-dropdown-button">
+                        <div id="mega-menu-dropdown" class="hidden absolute z-10 grid-cols-2 w-auto bg-white rounded-lg border border-gray-200 shadow-md dark:border-gray-700 md:grid-cols-3 dark:bg-gray-700">
+                            <div class="p-2 md:p-4">
+                                <ul class="space-y-0 md:space-y-4" aria-labelledby="mega-menu-dropdown-button">
                                     <li>
-                                        <a href="/fashion_illustrations"
-                                            class="text-gray-500 dark:text-gray-400 hover:font-bold hover:text-blue-600 dark:hover:text-blue-500">
+                                        <a href="{{ route('fashion_illustrations') }}" class="{{ Route::currentRouteNamed('fashion_illustrations') ? 'ly-current-item' : '' }}">
                                             {{ __('Fashion illustrations') }}
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/landscapes"
-                                            class="text-gray-500 dark:text-gray-400 hover:font-bold hover:text-blue-600 dark:hover:text-blue-500">
+                                        <a href="{{ route('landscapes') }}" class="{{ Route::currentRouteNamed('landscapes') ? 'ly-current-item' : '' }}">
                                             {{ __('Landscapes') }}
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/graphics"
-                                            class="text-gray-500 dark:text-gray-400 hover:font-bold hover:text-blue-600 dark:hover:text-blue-500">
+                                        <a href="{{ route('graphics') }}" class="{{ Route::currentRouteNamed('graphics') ? 'ly-current-item' : '' }}">
                                             {{ __('Graphics') }}
                                         </a>
                                     </li>
                                 </ul>
                             </div>
-                            {{-- <div class="p-4 pb-0 text-gray-900 md:pb-4 dark:text-white">
-								<ul class="space-y-4">
-									<li>
-										<a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
-											Blog
-										</a>
-									</li>
-									<li>
-										<a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
-											Newsletter
-										</a>
-									</li>
-									<li>
-										<a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
-											Playground
-										</a>
-									</li>
-									<li>
-										<a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
-											License
-										</a>
-									</li>
-								</ul>
-							</div>
-							<div class="p-4 text-gray-900 dark:text-white">
-								<ul class="space-y-4">
-									<li>
-										<a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
-											Contact Us
-										</a>
-									</li>
-									<li>
-										<a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
-											Support Center
-										</a>
-									</li>
-									<li>
-										<a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
-											Terms
-										</a>
-									</li>
-								</ul>
-							</div> --}}
                         </div>
                     </li>
                     <li>
-                        <a href="/education"
-                            class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:font-bold hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-gray-400 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700" aria-current="page">
+                        <a href="{{ route('education') }}" class="{{ Route::currentRouteNamed('education') ? 'ly-current-item' : '' }}"aria-current="page">
                             {{ __('Education') }}
                         </a>
                     </li>
                     <li>
-                        <a href="/master_classes"
-                            class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:font-bold hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-gray-400 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">
+                        <a href="{{ route('master_classes') }}" class="{{ Route::currentRouteNamed('master_classes') ? 'ly-current-item' : '' }}" aria-current="page">
                             {{ __('Master classes') }}
                         </a>
                     </li>
                     <li>
-                        <a href="/about"
-                            class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:font-bold hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-gray-400 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">
+                        <a href="{{ route('about') }}" class="{{ Route::currentRouteNamed('about') ? 'ly-current-item' : '' }}" aria-current="page">
                             {{ __('About') }}
                         </a>
                     </li>
