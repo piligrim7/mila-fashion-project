@@ -48,3 +48,56 @@ ul li a{
 	@apply font-bold text-red-500 dark:text-red-500 
 }
 
+.burger {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+
+	padding: 5%;
+	border: 0;
+	width: 32px;
+	height: 32px;
+
+	background-color: transparent;
+}
+
+.burger:hover {
+	cursor: pointer;
+}
+
+.burger:focus {
+	outline: none;
+}
+
+.burger-line {
+	@apply bg-gray-500 dark:bg-gray-400;
+	position: relative;
+
+	width: 100%;
+	height: 2px;
+	border-radius: 2px;
+	transition: .5s;
+}
+
+.burger-line:nth-child(1){
+	top: 2px;
+	transform: translateY(-7px);
+}
+
+.burger-line:nth-child(3){
+	bottom: 2px;
+	transform: translateY(7px);
+}
+
+.burger.open .burger-line:nth-child(1){
+	transform: rotate(45deg);
+}
+.burger.open .burger-line:nth-child(2){
+	width: 0%;
+	/* margin-left: 50%; */
+	opacity: 0;
+}
+.burger.open .burger-line:nth-child(3){
+	transform: rotate(135deg);
+}
+

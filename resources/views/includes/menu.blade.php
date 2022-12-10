@@ -1,6 +1,6 @@
 @section('menu_content')
 
-			{{-- ly-menu --}}
+	{{-- ly-menu --}}
 
     {{--mega-menu https://flowbite.com/docs/components/mega-menu/ --}}
 
@@ -54,7 +54,7 @@
                     Fashion blog
                 </span>
             </a>
-            <div class="flex items-center md:order-2">
+            <div class="flex items-center md:order-1">
                 {{-- language https://pro-cod.ru/lokalizaciya-v-laravel-s-pereklyuchatelem-yazykov-multiyazychnost.html --}}
                 <button type="button" data-dropdown-toggle="language-dropdown-menu"
                     class="inline-flex justify-center items-center pl-2 py-1 pr-1 text-gray-700 dark:text-gray-400 rounded cursor-pointer hover:text-gray-700 dark:hover:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700">
@@ -87,7 +87,7 @@
                 </div>
                 {{-- color theme https://www.freecodecamp.org/news/how-to-build-a-dark-mode-switcher-with-tailwind-css-and-flowbite/--}}
                 <button id="theme-toggle" type="button"
-                    class="text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 focus:ring-gray-200 dark:focus:ring-gray-700 rounded text-sm p-1.5">
+                    class="text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 focus:ring-gray-200 dark:focus:ring-gray-700 rounded text-sm p-1.5 duration-500">
                     <svg id="theme-toggle-dark-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg">
                         <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
@@ -109,8 +109,18 @@
 				</a> --}}
 
                 {{-- burger --}}
-                <button data-collapse-toggle="mega-menu" type="button"
-                    class="inline-flex items-center p-1 ml-1 text-sm text-gray-500 rounded md:hidden hover:bg-gray-200 focus:outline-none focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                {{-- <div> --}}
+                    <button data-collapse-toggle="mega-menu" type="button" id="burger"
+                        class="burger inline-flex items-center text-sm text-gray-500 rounded md:hidden hover:bg-gray-200 focus:outline-none focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                        aria-controls="mega-menu" aria-expanded="false">
+                        <div class="burger-line"></div>
+                        <div class="burger-line"></div>
+                        <div class="burger-line"></div>
+                    </button>
+                {{-- </div> --}}
+
+                {{-- <button data-collapse-toggle="mega-menu" type="button"
+                    class="inline-flex items-center p-1 text-sm text-gray-500 rounded md:hidden hover:bg-gray-200 focus:outline-none focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                     aria-controls="mega-menu" aria-expanded="false">
                     <span class="sr-only">Open main menu</span>
                     <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
@@ -120,10 +130,10 @@
                             clip-rule="evenodd">
                         </path>
                     </svg>
-                </button>
+                </button> --}}
             </div>
             {{-- menu --}}
-            <div id="mega-menu" class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1">
+            <div id="mega-menu" class="hidden justify-between items-center w-full md:flex md:w-auto">
                 <ul id="main-menu" class="flex flex-col mt-4 font-medium md:flex-row md:space-x-4 md:mt-0">
                     <li >
                         <a href="{{ route('main') }}" class="{{ Route::currentRouteNamed('main') ? 'ly-current-item' : '' }}" >
