@@ -54,7 +54,7 @@
                     Fashion blog
                 </span>
             </a>
-            <div class="flex items-center md:order-1">
+            <div class="flex items-center md:order-last">
                 {{-- language https://pro-cod.ru/lokalizaciya-v-laravel-s-pereklyuchatelem-yazykov-multiyazychnost.html --}}
                 <button type="button" data-dropdown-toggle="language-dropdown-menu"
                     class="inline-flex justify-center items-center pl-2 py-1 pr-1 text-gray-700 dark:text-gray-400 rounded cursor-pointer hover:text-gray-700 dark:hover:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700">
