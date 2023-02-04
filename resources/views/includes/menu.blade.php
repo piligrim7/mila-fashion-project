@@ -136,14 +136,14 @@
             <div id="mega-menu" class="hidden justify-between items-center w-full md:flex md:w-auto">
                 <ul id="main-menu" class="flex flex-col mt-4 font-medium md:flex-row md:space-x-4 md:mt-0">
                     <li >
-                        <a href="{{ route('main') }}" class="{{ Route::currentRouteNamed('main') ? 'ly-current-item' : '' }}" >
+                        <a href="{{ route('main') }}" class="{{ active_link('main')}}" >
 							{{ __('Main') }}
 							
 						</a>
                     </li>
                     <li>
                         <button id="mega-menu-dropdown-button" data-dropdown-toggle="mega-menu-dropdown"
-                            class="flex {{ (Request::is('my_work/*') ? 'ly-current-item' : '') }} items-center ly-menu-all-screen ly-menu-large-screen py-2 w-full ">
+                            class="flex {{ active_link('my_work/*') }} items-center ly-menu-all-screen ly-menu-large-screen py-2 w-full ">
                             {{ __('My work') }}
                             <svg aria-hidden="true" class="ml-0 w-5 h-5 md:w-4 md:h-4" fill="currentColor"
                                 viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -156,17 +156,17 @@
                             <div class="p-2 md:p-4">
                                 <ul class="space-y-0 md:space-y-4" aria-labelledby="mega-menu-dropdown-button">
                                     <li>
-                                        <a href="{{ route('fashion_illustrations') }}" class="{{ Route::currentRouteNamed('fashion_illustrations') ? 'ly-current-item' : '' }}">
+                                        <a href="{{ route('fashion_illustrations') }}" class="{{ active_link('fashion_illustrations') }}">
                                             {{ __('Fashion illustrations') }}
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('landscapes') }}" class="{{ Route::currentRouteNamed('landscapes') ? 'ly-current-item' : '' }}">
+                                        <a href="{{ route('landscapes') }}" class="{{ active_link('landscapes') }}">
                                             {{ __('Landscapes') }}
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('graphics') }}" class="{{ Route::currentRouteNamed('graphics') ? 'ly-current-item' : '' }}">
+                                        <a href="{{ route('graphics') }}" class="{{ active_link('graphics') }}">
                                             {{ __('Graphics') }}
                                         </a>
                                     </li>
@@ -175,17 +175,17 @@
                         </div>
                     </li>
                     <li>
-                        <a href="{{ route('education') }}" class="{{ Route::currentRouteNamed('education') ? 'ly-current-item' : '' }}"aria-current="page">
+                        <a href="{{ route('education') }}" class="{{ active_link('education') }}"aria-current="page">
                             {{ __('Education') }}
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('master_classes') }}" class="{{ Route::currentRouteNamed('master_classes') ? 'ly-current-item' : '' }}" aria-current="page">
+                        <a href="{{ route('master_classes') }}" class="{{ active_link('master_classes') }}" aria-current="page">
                             {{ __('Master classes') }}
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('about') }}" class="{{ Route::currentRouteNamed('about') ? 'ly-current-item' : '' }}" aria-current="page">
+                        <a href="{{ route('about') }}" class="{{ active_link('about') }}" aria-current="page">
                             {{ __('About') }}
                         </a>
                     </li>

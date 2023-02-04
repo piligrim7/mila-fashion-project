@@ -44,7 +44,7 @@ ul li a{
 	@apply text-gray-700 dark:text-gray-400 hover:text-red-500 dark:hover:text-red-500
 }
 
-.ly-current-item{
+.ly-active{
 	@apply font-bold text-red-500 dark:text-red-500 
 }
 
