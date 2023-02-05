@@ -71,7 +71,7 @@
                 @endauth
             </div>
             @endif --}}
-            <div class="hidden justify-between items-center w-full md:flex md:w-auto">
+            {{-- <div class="hidden justify-between items-center w-full md:flex md:w-auto">
                 <ul class="flex flex-col mt-4 font-medium md:flex-row md:space-x-2 md:mt-0">
                     <li>
                         <a href="{{ route('register') }}" class="{{ active_link('register')}} ">
@@ -84,7 +84,7 @@
                         </a>
                     </li>
                 </ul>
-            </div>
+            </div> --}}
             {{-- language https://pro-cod.ru/lokalizaciya-v-laravel-s-pereklyuchatelem-yazykov-multiyazychnost.html --}}
             <button type="button" data-dropdown-toggle="language-dropdown-menu"
                 class="inline-flex justify-center items-center pl-2 py-1 pr-1 text-gray-700 dark:text-gray-400 rounded cursor-pointer hover:text-gray-700 dark:hover:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 ">

@@ -48,13 +48,14 @@ Route::get('/about', function() {
 	return view('about.index');
 })->name('about');
 
-Route::get('/login', function () {
-	return view('login.index');
-})->name('login');
+// Route::get('/login', function () {
+// 	return view('login.index');
+// })->name('login');
 
-Route::get('/register', function () {
-	return view('register.index');
-})->name('register');
+// Route::get('/register', function () {
+// 	return view('register.index');
+// })->name('register');
+
 // Route::get('/user/{id}/{name}', function($id, $name){
 // 	return 'ID: '. $id.'. Name: '.$name;
 // })->name('');
