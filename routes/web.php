@@ -21,33 +21,40 @@ Route::get('lang/{lang}',
 );
 
 Route::get('/', function () {
-    return view('main');
+    return view('main.index');
 })->name('main');
 
 Route::get('/my_work/fashion_illustrations', function () {
-	return view('my_work/fashion_illustrations');
+	return view('my_work.fashion_illustrations.index');
 })->name('fashion_illustrations');
 
 Route::get('/my_work/landscapes', function () {
-	return view('my_work/landscapes');
+	return view('my_work.landscapes.index');
 })->name('landscapes');
 
 Route::get('/my_work/graphics', function () {
-	return view('my_work/graphics');
+	return view('my_work.graphics.index');
 })->name('graphics');
 
 Route::get('/education', function () {
-	return view('education');
+	return view('education.index');
 })->name('education');
 
 Route::get('/master_classes', function () {
-	return view('master_classes');
+	return view('master_classes.index');
 })->name('master_classes');
 
 Route::get('/about', function() {
-	return view('about');
+	return view('about.index');
 })->name('about');
 
+Route::get('/login', function () {
+	return view('login.index');
+})->name('login');
+
+Route::get('/register', function () {
+	return view('register.index');
+})->name('register');
 // Route::get('/user/{id}/{name}', function($id, $name){
 // 	return 'ID: '. $id.'. Name: '.$name;
 // })->name('');

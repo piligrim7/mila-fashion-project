@@ -12,8 +12,7 @@ export default defineConfig({
             input: [
 				'resources/js/app.js',
 				'resources/js/flowbite.js',
-				'resources/js/color_theme.js',
-				'app/helpers.php'
+				'resources/js/color_theme.js'
             ],
             refresh: true,
         }),
